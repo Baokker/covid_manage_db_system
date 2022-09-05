@@ -132,11 +132,10 @@ const actions = {
       //     reject(error);
       //   });
 
-          removeToken(); // must remove token first
-          resetRouter();
-          commit("RESET_STATE");
-          resolve();
-      
+      removeToken(); // must remove token first
+      resetRouter();
+      commit("RESET_STATE");
+      resolve();
     });
   },
 

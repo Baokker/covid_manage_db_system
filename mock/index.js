@@ -836,14 +836,6 @@ Mock.mock(baseURL + "/user/login", "post", (config) => {
     return {
       code: 20000,
       token: config.body.userName + "-token",
-      data: {
-        roles: config.body.userName == "admin" ? ["admin"] : ["user"],
-        ID: "123456",
-        name: config.body.userName,
-        gender: 1,
-        phoneNumber: "34567",
-        age: 20,
-      },
     };
   }
 });
@@ -853,7 +845,6 @@ Mock.mock(baseURL + "/user/logout", "post", {
   data: "success",
 });
 
-// this mock is useless now
 Mock.mock(RegExp(baseURL + "/user/info.*"), "get", (config) => {
   console.log("User info", config.url);
   if (param2Obj(config.url).token.includes("admin")) {

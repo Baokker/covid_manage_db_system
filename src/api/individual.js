@@ -26,11 +26,9 @@ export function modifyPersonalRequest(data) {
 
 export function getPersonalRequest(params) {
   return request({
-
     url: "/personalRequest/" + params,
     method: "get",
     params: params
-
   });
 }
 

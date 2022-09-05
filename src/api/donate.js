@@ -1,9 +1,10 @@
 import request from "@/plugins/axios";
 
-export function getDonateData() {
+export function getDonateData(params) {
   return request({
     url: "/donateData",
     method: "get",
+    params,
   });
 }
 
